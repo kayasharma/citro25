@@ -69,17 +69,7 @@ const Pahal = () => {
     [activePreview]
   );
 
-  // Open the preview for the selected product
-  const openPreview = (productId) => {
-    console.log("Opening preview for product:", productId); // Debugging
-    setActivePreview(productId);
-  };
 
-  // Close the preview
-  const closePreview = () => {
-    console.log("Closing preview");
-    setActivePreview(null);
-  };
 
   return (
     <div className="container">

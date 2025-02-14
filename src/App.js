@@ -26,7 +26,7 @@ import axios from "axios";
 import Loader from "./pages/Loader";
 import Firstyear from "./pages/Firstyear";
 import AboutUs from "./pages/AboutUs";
-import LoginSignup from "./pages/LoginSignup";
+import Register from "./pages/Register";
 
 const App = () => {
   const footerRef = useRef(null);
@@ -85,7 +85,6 @@ const App = () => {
           <Route path="/Logos" element={<Logos />} />
        
           <Route path="/Timeline" element={<Timeline />} />
-          <Route path="/LoginSignup" element={<LoginSignup />} />
           <Route path="/Homepageevents" element={<Homepageevents />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Robote" element={<Robote />} />
@@ -95,7 +94,7 @@ const App = () => {
           <Route path="/Cdip" element={<Cdip />} />
           <Route path="/Management" element={<Management />} />
           <Route path="/Law" element={<Law />} />
-
+          <Route path="/Register" element={<Register />} />
           <Route path="/Sports" element={<Sports />} />
           <Route path="/Pahal" element={<Pahal />} />
           <Route path="/Onspotevents" element={<Onspotevents />} />
