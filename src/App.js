@@ -6,9 +6,13 @@ import Timeline from "./pages/Timeline";
 import Robote from "./pages/Robote";
 import Home from "./pages/Home";
 
+import Register from "../src/store/Register"; // Register component for registration
+import CheckoutSuccess from "./store/checkout-success";
+import CheckoutCancel from "./store/checkout-cancel";
+import PaymentPage from "./store/checkoutsession";
+
 import Homepageevents from "./pages/Homepageevents";
 import Footer from "./pages/Footer";
-import PaymentPage from "./pages/PaymentPage";
 import Onspotevents from "./pages/Onspotevents";
 import Cs from "./pages/Cs";
 import Civil from "./pages/Civil";
@@ -84,9 +88,11 @@ const App = () => {
         <Routes>
           <Route path="/Logos" element={<Logos />} />
           <Route path="/ImageSlider" element={<ImageSlider />} />
+          <Route path="/Register" element={<Register />} />{" "}
           {/* Register route */}
-          <Route path="/PaymentPage" element={<PaymentPage />} />
-          {/* Register route */}
+          <Route path="/checkout" element={<PaymentPage />} />
+          <Route path="/checkout-success" element={<CheckoutSuccess />} />
+          <Route path="/checkout-cancel" element={<CheckoutCancel />} />
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/Homepageevents" element={<Homepageevents />} />
           <Route path="/AboutUs" element={<AboutUs />} />
