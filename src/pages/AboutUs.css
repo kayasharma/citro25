@@ -6,14 +6,17 @@ section {
   margin: 0 auto;
 }
 .image {
-  background: url("http://localhost:3000/images/fm.jpg");
+  background: url("../assets/images/hello.jpg");
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .content {
   background: #fff;
   display: flex;
+
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -32,7 +35,7 @@ section {
 }
 .content p {
   padding-bottom: 15px;
-  font-weight: 300;
+  font-weight: 500;
   opacity: 0.7;
   width: 60%;
   text-align: center;
@@ -43,7 +46,7 @@ section {
   margin: 15px 0;
 }
 .links li {
-  border: 0.5px solid #777;
+  border: 0.5px solid #0b0a0a;
   list-style: none;
   border-radius: 5px;
   padding: 10px 15px;
@@ -52,14 +55,14 @@ section {
 }
 .links li a {
   text-transform: uppercase;
-  color: #777;
+  color: #1c1a1a;
   text-decoration: none;
 }
 .links li:hover {
   border-color: #06d6a0;
 }
 .links li:hover a {
-  color: #06d6a0;
+  color: #077356;
 }
 .vertical-line {
   height: 30px;
@@ -75,6 +78,7 @@ section {
   display: block;
   padding: 5px;
   margin: 5px;
+  font-size: 40px;
 }
 .icons li i {
   font-size: 36px;
@@ -95,7 +99,7 @@ section {
     height: 100vh;
   }
   .content {
-    height: 100vh;
+    height: 150vh;
   }
   .content h2 {
     font-size: 20px;
@@ -116,7 +120,10 @@ section {
   .links li {
     padding: 6px 10px;
   }
+  .icons li {
+    font-size: 30px;
+  }
   .icons li i {
-    font-size: 15px;
+    font-size: 25px;
   }
 }
