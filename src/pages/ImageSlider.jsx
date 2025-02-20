@@ -1,50 +1,57 @@
-import React, { useState, useEffect } from "react";
-import "./ImageSlider.css"; // Import the CSS file
+import React from "react";
+import "./ImageSlider.css";
 
-const ImageSlider = () => {
-  const [slides, setSlides] = useState([
-    "box1",
-    "box2",
-    "box3",
-    "box4",
-    "box5",
-    "box6",
-    "box7",
-    "box8",
-    "box9",
-    "box10",
-    "box11",
-    "box12",
-  ]);
+const images = [
+  "a.jpg",
+  "aaa.jpg",
+  "b.jpg",
+  "two.jpg",
+  "ccc.jpg",
+  "d.jpg",
+  "e.jpg",
+  "four.jpg",
+  "g.jpg",
+  "h.jpg",
+  "j.jpg",
+  "jj.jpg",
+  "jjj.jpg",
+  "kk.jpg",
+  "i.jpg",
+  "m.jpg",
+  "nine.PNG",
+  "one.jpg",
+  "six.PNG",
+  "ten.PNG",
+  "thre.jpg",
+  "13.PNG",
+  "21.PNG",
+  "22.PNG",
+];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      rotate();
-    }, 4000); // Rotate every 4 seconds
+const tallImages = [3, 6, 11, 12, 15, 16, 18, 19, 20, 22];
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, []);
-
-  const rotate = () => {
-    setSlides((prevSlides) => {
-      const lastChild = prevSlides[prevSlides.length - 1]; // Get the last slide
-      const newSlides = [lastChild, ...prevSlides.slice(0, -1)]; // Move the last slide to the beginning
-      return newSlides;
-    });
-  };
-
+function ImageSlider() {
   return (
-    <div className="coontainer">
-      <div className="slider">
-        {slides.map((slide, index) => (
+    <div>
+      <h1 className="photos-heading">Photos</h1>
+      <div className="zoo">
+        {images.map((image, index) => (
           <div
             key={index}
-            className={`${slide} ${index === 0 ? "firstSlide" : ""}`}
-          ></div>
+            className={`animal ${
+              tallImages.includes(index + 1) ? "giraffe" : ""
+            }`}
+          >
+            <img
+              className="full-size-image"
+              src={`/img/${image}`}
+              alt={`Animal ${index + 1}`}
+            />
+          </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default ImageSlider;
